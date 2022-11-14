@@ -1,0 +1,192 @@
+/* 
+    font-family: 'Merriweather', serif;
+    font-family: 'Oswald', sans-serif;
+*/
+/* Titles*/
+.description .title, .list .title, .teaching .title, .next-step .title, .contact-us .title {
+    font-size: 70px;
+    line-height: 84px;
+    text-align: left;
+    padding-top: 100px;
+    padding-bottom: 75px;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+.header li {
+    list-style: none;
+    width: 25%;
+}
+.header li a{
+    text-decoration: unset;
+    font-size: 48px;
+    line-height: 71px;
+    display: block;
+    text-align: center;
+}
+
+/* main section */
+
+.main .title {
+    z-index: 1;
+    font-size: 80px;
+    line-height: 115.2px;
+    padding-top: 100px;
+}
+
+.main .sub-title {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    z-index: 1;
+    font-size: 36px;
+    line-height: 45.25px;
+}
+.main-image {
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+    height: 100%;
+}
+
+.main .check-courses-btn {
+    z-index: 1;
+    width: 420px;
+    height: 120px;
+    font-size: 40px;
+    line-height: 60px;
+    margin-bottom: 100px;
+    cursor: pointer;
+}
+
+/* description section */
+
+.description .description-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.description .card {
+    width: 350px;
+}
+.description .card img {
+    width: 350px;
+    height: 400px;
+}
+
+.description .card-title {
+    font-size: 36px;
+    line-height: 45px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.description .card-description {
+    font-size: 32px;
+    line-height: 40px;
+}
+
+/* list section */
+
+.list ul {
+    list-style: none;
+}
+.list ul li {
+    font-size: 32px;
+    line-height: 40px;
+    padding-bottom: 15px;
+}
+
+.list ul li::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -45px;
+    top: 25%;
+    background-color: #487D76;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    z-index: 1;
+}
+
+/* teaching section */
+
+.teaching-block {
+    display: flex;
+    justify-content: space-between;
+}
+.teaching-block img {
+    width: 500px;
+    height: 500px;
+}
+.teaching-description {
+    font-size: 24px;
+    line-height: 40px;
+    padding-left: 20px;
+}
+.teaching-description div:first-child {
+    padding-bottom: 20px;
+}
+
+/* next-step section */
+
+.next-step-list h4 {
+    font-size: 48px;
+    line-height: 71px;
+    color: black;
+    padding-bottom: 20px;
+}
+.next-step-list span {
+    font-size: 25px;
+    line-height: 40px;
+}
+
+.next-step-list a {
+    text-decoration: unset;
+}
+.next-step-buttons button:first-child {
+    margin-right: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* contact us section */
+
+.contact-us-list ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact-us-list ul li a {
+    text-decoration: unset;
+}
+
+.contact-us-list ul li {
+    font-size: 32px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.contact-us-list ul li::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -45px;
+    top: 5%;
+    background-color: #487D76;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    z-index: 1;
+}
+

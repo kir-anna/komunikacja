@@ -1,0 +1,55 @@
+/* Font Sizes */
+
+.fz-oswald {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+}
+
+.fz-merriweather {
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+}
+.fz-merriweather-b {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+}
+
+.tt-u {
+    text-transform: uppercase;
+}
+
+/* Position */
+.pos-r {
+    position: relative;
+}
+
+/* Colors */
+.clr-white {
+    color: #FFF;
+}
+.clr-black {
+    color: #000;
+}
+.clr-default {
+    color: #487D76;
+}
+
+.bg-default {
+    background-color: #487D76;
+}
+
+/* Button default styling */
+.button-clr-default {
+    width: 400px;
+    height: 120px;
+    background: #487D76;
+    color: white;
+    font-size: 40px;
+    line-height: 59px;
+    text-transform: uppercase;
+    border: unset;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+}
+

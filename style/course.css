@@ -1,0 +1,87 @@
+/* title */
+.learning .title, .skils .title, .our-courses .title {
+    font-size: 70px;
+    padding-bottom: 100px;
+}
+
+/* courses */
+.course-wrapper > * {
+    width: 50%;
+}
+.course-wrapper {
+    height: 700px;
+}
+.course-title-block .title {
+    padding: 100px;
+}
+.course-title-block .button {
+    width: 100%;
+    background: unset;
+    border: unset;
+    font-size: 36px;
+    line-height: 45px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+.course-title-block .button span {
+    padding: 10px;
+    font-size: 35px;
+}  
+
+.title-under-text {
+    font-size: 32px;
+    line-height: 40px;
+    padding: 100px 0;
+}
+
+/* learning & skils */
+.learning-text, .skils-text {
+    font-size: 32px;
+    line-height: 40px;
+    padding-left: 55px;
+    width: 50%;
+}
+
+.learning-text div, .skils-text div {
+    padding-bottom: 20px;
+}
+.skils-content img, .learning-content img {
+    width: 50%;
+}
+.skils-text {
+    padding-right: 55px;
+    padding-left: 0;
+}
+
+.skils, .our-courses {
+    padding-top: 100px;
+}
+
+/* our-courses */
+.our-courses-item {
+    padding: 50px;
+    margin-bottom: 50px;
+}
+.our-courses-item:last-child {
+    margin-bottom: 0;
+}
+.our-courses-item .sub-title {
+    font-size: 48px;
+    line-height: 71px;
+    padding-bottom: 50px;
+}
+.our-courses .item-wrapper {
+    display: flex;
+}
+.our-courses .item-wrapper > * {
+    width: 50%;
+}
+.our-courses .item-wrapper img {
+    padding-right: 50px;
+}
+.our-courses .item-content p {
+    font-size: 32px;
+    line-height: 40px;
+    padding-bottom: 95px;
+}

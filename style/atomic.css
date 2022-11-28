@@ -23,6 +23,15 @@
     position: relative;
 }
 
+/* flex */
+.d-flex {
+    display: flex;
+}
+
+.fl-column {
+    flex-direction: column;
+}
+
 /* Colors */
 .clr-white {
     color: #FFF;
@@ -53,3 +62,16 @@
     cursor: pointer;
 }
 
+.button-clr-revert {
+    width: 400px;
+    height: 120px;
+    background: white;
+    color: #487D76;
+    font-size: 40px;
+    line-height: 59px;
+    text-transform: uppercase;
+    border: unset;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+}

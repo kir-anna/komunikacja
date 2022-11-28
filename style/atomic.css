@@ -31,6 +31,9 @@
 .fl-column {
     flex-direction: column;
 }
+.al-center {
+    align-items: center;
+}
 
 /* Colors */
 .clr-white {

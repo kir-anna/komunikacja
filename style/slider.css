@@ -1,0 +1,41 @@
+.wrapper-slider {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 50px; }
+
+.slider-container {
+  overflow: hidden;
+  background-color: pink; 
+  height: 1400px;
+}
+
+.slider-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  -webkit-transition: .2s;
+  transition: .2s; }
+
+.slider-item {
+  height: 400px;
+  min-width: 200px; 
+  margin-bottom: 50px;
+}
+
+.slider-item:nth-child(3n+1) {
+  background-color: yellow; 
+}
+
+.slider-item:nth-child(3n+2) {
+  background-color: black; 
+}
+
+.slider-item:nth-child(3n+3) {
+  background-color: blue; 
+}
+
+.slider-buttons {
+  text-align: center; 
+}

@@ -1,0 +1,28 @@
+.main-wrapper img {
+    width: 75%;
+}
+.main-preview span {
+    padding-bottom: 37px;
+}
+.main-preview span:first-child{
+    padding-top: 50px;
+    padding-left: 199px;
+}
+.main-preview span:nth-child(2){
+    padding-left: 233px;
+}
+.main-preview span:nth-child(3){
+    padding-left: 199px;
+}
+.main-preview span:nth-child(4){
+    padding-left: 122px;
+}
+.main-preview span:nth-child(5){
+    padding-left: 60px;
+}
+
+.default-title {
+    padding: 100px 0;
+    font-size: 70px;
+    line-height: 120%;
+}

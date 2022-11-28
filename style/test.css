@@ -1,3 +1,8 @@
+.test-wrapper > * {
+    width: 50%;
+    height: 700px;
+}
+
 .default-title {
     padding: 100px 0;
     font-size: 70px;
@@ -9,4 +14,11 @@
 }
 .description-test-item {
     padding-bottom: 25px;
+}
+
+.test-title-block {
+    padding: 0px 50px 50px 50px;
+}
+.test-title-block .title {
+    padding-top: 50px;
 }

@@ -1,0 +1,12 @@
+.default-title {
+    padding: 100px 0;
+    font-size: 70px;
+    line-height: 120%;
+}
+.description-test-item h3 {
+    padding-bottom: 25px;
+    font-size: 48px;
+}
+.description-test-item {
+    padding-bottom: 25px;
+}

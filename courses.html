@@ -28,7 +28,7 @@
         <div class="d-flex course-wrapper bg-default">
             <div class="course-title-block ">
                 <h1 class="title fz-oswald clr-white pos-r tt-u">German courses for all ages</h1>
-                <button class="button fz-merriweather-b clr-white d-flex">Choose your course<span class="material-symbols-outlined">arrow_downward</span></button>
+                <button class="button fz-merriweather-b clr-white d-flex"><a class="clr-white" href="#courses">Choose your course</a> <span class="material-symbols-outlined">arrow_downward</span></button>
             </div>
             <img class="courses-image" src="images/courses-title.png" alt="">
         </div>
@@ -69,7 +69,7 @@
     </section>
     <section>
         <div class="wrapper">
-            <div class="our-courses">
+            <div id="courses" class="our-courses">
                 <h3 class=" title tt-u fz-oswald">Our courses </h3>
                 <div class="our-courses-items">
                     <div class="our-courses-item bg-default">
@@ -173,12 +173,12 @@
             <h3 class="fz-merriweather  clr-white">Do you want us to send you the confirmations</h3>
             <fieldset class="radio-buttons">
                 <div>
-                    <input type="radio" id="viaE-Mail" name="via E-Mail" value="via E-Mail" checked>
+                    <input type="checkbox" id="viaE-Mail" name="via E-Mail" value="via E-Mail" checked>
                     <label for="viaE-Mail">via E-Mail</label>
                 </div>
 
                 <div>
-                    <input type="radio" id="viaPhone" name="via Phone" value="via Phone">
+                    <input type="checkbox" id="viaPhone" name="via Phone" value="via Phone">
                     <label for="viaPhone">via Phone</label>
                 </div>
             </fieldset>
@@ -188,7 +188,7 @@
                 </div>
             </div>
             <footer>
-                <button class="button-clr-revert">Send</button>
+                <button id="send" class="button-clr-revert">Send</button>
             </footer>
         </div>
     </div>
@@ -200,6 +200,12 @@
     const Modal = document.getElementById('modal');
     const Overlay = document.getElementById('overlay');
     const CloseButton = document.getElementById('close')
+    const SendButton = document.getElementById('send');
+
+SendButton.addEventListener('click', function(){
+    Modal.style.display = 'none';
+    Overlay.style.display = 'none';
+})
 
     CloseButton.addEventListener('click', function(){
         Modal.style.display = 'none';

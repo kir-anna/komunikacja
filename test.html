@@ -174,12 +174,12 @@
             <h3 class="fz-merriweather  clr-white">Do you want us to send you the confirmations</h3>
             <fieldset class="radio-buttons">
                 <div>
-                    <input type="radio" id="viaE-Mail" name="via E-Mail" value="via E-Mail" checked>
+                    <input type="checkbox" id="viaE-Mail" name="via E-Mail" value="via E-Mail" checked>
                     <label for="viaE-Mail">via E-Mail</label>
                 </div>
 
                 <div>
-                    <input type="radio" id="viaPhone" name="via Phone" value="via Phone">
+                    <input type="checkbox" id="viaPhone" name="via Phone" value="via Phone">
                     <label for="viaPhone">via Phone</label>
                 </div>
             </fieldset>
@@ -189,7 +189,7 @@
                 </div>
             </div>
             <footer>
-                <button class="button-clr-revert">Send</button>
+                <button id="send" class="button-clr-revert">Send</button>
             </footer>
         </div>
     </div>
@@ -198,10 +198,16 @@
 
 <script>
 
-const ApplyButtons = document.querySelectorAll('.apply-test');
+    const ApplyButtons = document.querySelectorAll('.apply-test');
     const Modal = document.getElementById('modal');
     const Overlay = document.getElementById('overlay');
-    const CloseButton = document.getElementById('close')
+    const CloseButton = document.getElementById('close');
+    const SendButton = document.getElementById('send');
+
+    SendButton.addEventListener('click', function(){
+        Modal.style.display = 'none';
+        Overlay.style.display = 'none';
+    })
 
     CloseButton.addEventListener('click', function(){
         Modal.style.display = 'none';

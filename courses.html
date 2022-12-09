@@ -210,10 +210,15 @@
         Modal.style.display = 'none';
         Overlay.style.display = 'none';
     }
-    ApplyButtonsC1.addEventListener('click', function(){
-        OpenModal()
+
+    function creatingModalData(text) {
+        OpenModal();
         removeOptions(DynamicTestDate);
-        DynamicTitle.innerHTML = "PRE-ADVANCED course" 
+        DynamicTitle.innerHTML = text 
+    }
+
+    ApplyButtonsC1.addEventListener('click', function(){
+        creatingModalData("PRE-ADVANCED course")
         let option = document.createElement("option");
         option.text = "Summer Semestr 02.04.2023";
         let option2 = document.createElement("option");
@@ -225,9 +230,7 @@
         DynamicTestDate.add(option3)
     })
     ApplyButtonsB1.addEventListener('click', function(){
-        OpenModal()
-        removeOptions(DynamicTestDate);
-        DynamicTitle.innerHTML = "intermediate course" 
+        creatingModalData("intermediate course")
         let option = document.createElement("option");
         option.text = "Summer Semestr 01.03.2023";
         let option2 = document.createElement("option");
@@ -237,9 +240,7 @@
 
     })
     ApplyButtonsB2.addEventListener('click', function(){
-        OpenModal()
-        removeOptions(DynamicTestDate);
-        DynamicTitle.innerHTML = "upper intermediate course" 
+        creatingModalData("upper intermediate course")
         let option = document.createElement("option");
         option.text = "Summer Semestr 02.04.2023";
         let option2 = document.createElement("option");

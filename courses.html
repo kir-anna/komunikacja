@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Courses page</title>
 </head>
 <body>
@@ -76,7 +78,7 @@
                             <img src="images/our-course-1.png" alt="image1">
                             <div class="item-content">
                                 <p class="fz-merriweather clr-white">I can speak and understand reasonably well and can use basic tenses but have problems with more complex grammar and vocabulary.</p>
-                                <button class="tt-u button-clr-revert">apply for b1 course</button>
+                                <button class="tt-u button-clr-revert apply-test">apply for b1 course</button>
                             </div>
                         </div>
                     </div>
@@ -86,7 +88,7 @@
                             <img src="images/our-course-2.png" alt="image2">
                             <div class="item-content">
                                 <p class="fz-merriweather clr-white">I can communicate without much difficulty but still make quite a lot of mistakes and misunderstand sometimes.</p>
-                                <button class="tt-u button-clr-revert">apply for b2 course</button>
+                                <button class="tt-u button-clr-revert apply-test">apply for b2 course</button>
                             </div>
                         </div>
                     </div>
@@ -96,7 +98,7 @@
                             <img src="images/our-course-3.png" alt="image3">
                             <div class="item-content">
                                 <p class="fz-merriweather clr-white">I speak and understand well but still make mistakes and sometimes people do not understand me clearly</p>
-                                <button class="tt-u button-clr-revert">apply for c1 course</button>
+                                <button class="tt-u button-clr-revert apply-test">apply for c1 course</button>
                             </div>
                         </div>
                     </div>
@@ -120,5 +122,96 @@
             </div>
         </div>
     </footer>
+
+    <div id="modal" class="review-modal bg-default">
+        <div class="wrapper">
+            <h3 class="fz-oswald tt-u clr-white">intermediate course</h3>
+            <div class="content-wrapper">
+                <button id="close" class="close"><span class="material-symbols-outlined clr-white"
+                        style="font-size: 50px;">
+                        close
+                    </span></button>
+                <div>
+                    <label for="LastName" class="fz-merriweather  clr-white">Last Name</label>
+                    <input type="text" name="LastName" id="LastName">
+                </div>
+                <div>
+                    <label for="FirstName" class="fz-merriweather  clr-white">First Name</label>
+                    <input type="text" name="FirstName" id="FirstName">
+                </div>
+                <div>
+                    <label for="PhoneNumber" class="fz-merriweather  clr-white">PhoneNumber</label>
+                    <input type="text" name="PhoneNumber" id="PhoneNumber">
+                </div>
+                <div>
+                    <label for="email" class="fz-merriweather  clr-white">E-mail</label>
+                    <input type="text" name="email" id="email">
+                </div>
+                <div>
+                    <label for="NativeLanguage" class="fz-merriweather  clr-white">Native Language</label>
+                    <select name="NativeLanguage" id="NativeLanguage">
+                        <option value="default"></option>
+                        <option value="English">English</option>
+                        <option value="Ukrainian">Ukrainian</option>
+                        <option value="Polish">Polish</option>
+                        <option value="Arabic">Arabic</option>
+                        <option value="notListed">not listed</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="TestDate" class="fz-merriweather  clr-white">Course Start Date</label>
+                    <select name="TestDate" id="TestDate">
+                        <option value="default"></option>
+                        <option value="1">01.05.2023, 12:00</option>
+                        <option value="2">01.09.2023, 15:00</option>
+                        <option value="3">10.12.2023, 13:00</option>
+                        <option value="4">15.02.2024, 15:00</option>
+                        <option value="5">11.04.2024, 15:00</option>
+                    </select>
+                </div>
+            </div>
+            <h3 class="fz-merriweather  clr-white">Do you want us to send you the confirmations</h3>
+            <fieldset class="radio-buttons">
+                <div>
+                    <input type="radio" id="viaE-Mail" name="via E-Mail" value="via E-Mail" checked>
+                    <label for="viaE-Mail">via E-Mail</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="viaPhone" name="via Phone" value="via Phone">
+                    <label for="viaPhone">via Phone</label>
+                </div>
+            </fieldset>
+            <div class="checkbox">
+                <div> <input type="checkbox" name="" id="">
+                    <span class="clr-white">I agree with the processing of my personal information</span>
+                </div>
+            </div>
+            <footer>
+                <button class="button-clr-revert">Send</button>
+            </footer>
+        </div>
+    </div>
+    <div id="overlay" class="overlay"></div>
 </body>
+
+<script>
+    const ApplyButtons = document.querySelectorAll('.apply-test');
+    const Modal = document.getElementById('modal');
+    const Overlay = document.getElementById('overlay');
+    const CloseButton = document.getElementById('close')
+
+    CloseButton.addEventListener('click', function(){
+        Modal.style.display = 'none';
+        Overlay.style.display = 'none';
+    })
+
+    ApplyButtons.forEach(button=> {
+        button.addEventListener('click', function(){
+            console.log(Modal, Overlay);
+            Modal.style.display = 'block';
+            Overlay.style.display = 'block';
+        })
+    })
+</script>
 </html>

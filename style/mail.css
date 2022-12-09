@@ -11,6 +11,11 @@
     padding-bottom: 75px;
 }
 
+a{
+    text-decoration: unset;
+    color: black;
+}
+
 .wrapper {
     width: 80%;
     margin: 0 auto;

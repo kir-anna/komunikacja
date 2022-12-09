@@ -78,7 +78,7 @@
                             <img src="images/our-course-1.png" alt="image1">
                             <div class="item-content">
                                 <p class="fz-merriweather clr-white">I can speak and understand reasonably well and can use basic tenses but have problems with more complex grammar and vocabulary.</p>
-                                <button class="tt-u button-clr-revert apply-test">apply for b1 course</button>
+                                <button id="apply-test-b1" class="tt-u button-clr-revert ">apply for b1 course</button>
                             </div>
                         </div>
                     </div>
@@ -88,7 +88,7 @@
                             <img src="images/our-course-2.png" alt="image2">
                             <div class="item-content">
                                 <p class="fz-merriweather clr-white">I can communicate without much difficulty but still make quite a lot of mistakes and misunderstand sometimes.</p>
-                                <button class="tt-u button-clr-revert apply-test">apply for b2 course</button>
+                                <button id="apply-test-b2" class="tt-u button-clr-revert ">apply for b2 course</button>
                             </div>
                         </div>
                     </div>
@@ -98,7 +98,7 @@
                             <img src="images/our-course-3.png" alt="image3">
                             <div class="item-content">
                                 <p class="fz-merriweather clr-white">I speak and understand well but still make mistakes and sometimes people do not understand me clearly</p>
-                                <button class="tt-u button-clr-revert apply-test">apply for c1 course</button>
+                                <button id="apply-test-c1" class="tt-u button-clr-revert ">apply for c1 course</button>
                             </div>
                         </div>
                     </div>
@@ -124,8 +124,8 @@
     </footer>
 
     <div id="modal" class="review-modal bg-default">
-        <div class="wrapper">
-            <h3 class="fz-oswald tt-u clr-white">intermediate course</h3>
+        <div id="modal-wrapper" class="wrapper">
+            <h3 id="dynamic-title" class="fz-oswald tt-u clr-white">intermediate course</h3>
             <div class="content-wrapper">
                 <button id="close" class="close"><span class="material-symbols-outlined clr-white"
                         style="font-size: 50px;">
@@ -196,28 +196,46 @@
 </body>
 
 <script>
-    const ApplyButtons = document.querySelectorAll('.apply-test');
+    const ApplyButtonsC1 = document.getElementById('apply-test-c1');
+    const ApplyButtonsB1 = document.getElementById('apply-test-b1');
+    const ApplyButtonsB2 = document.getElementById('apply-test-b2');
     const Modal = document.getElementById('modal');
     const Overlay = document.getElementById('overlay');
     const CloseButton = document.getElementById('close')
     const SendButton = document.getElementById('send');
+    const DynamicTitle = document.getElementById('dynamic-title')
 
-SendButton.addEventListener('click', function(){
-    Modal.style.display = 'none';
-    Overlay.style.display = 'none';
-})
+    function OpenModal (){
+        Modal.style.display = 'block';
+        Overlay.style.display = 'block';
+    }
 
-    CloseButton.addEventListener('click', function(){
+    function CloseModal (){
         Modal.style.display = 'none';
         Overlay.style.display = 'none';
+    }
+    ApplyButtonsC1.addEventListener('click', function(){
+        OpenModal()
+        DynamicTitle.innerHTML = "PRE-ADVANCED course" 
+
+    })
+    ApplyButtonsB1.addEventListener('click', function(){
+        OpenModal()
+        DynamicTitle.innerHTML = "intermediate course" 
+
+    })
+    ApplyButtonsB2.addEventListener('click', function(){
+        OpenModal()
+        DynamicTitle.innerHTML = "upper intermediate course" 
     })
 
-    ApplyButtons.forEach(button=> {
-        button.addEventListener('click', function(){
-            console.log(Modal, Overlay);
-            Modal.style.display = 'block';
-            Overlay.style.display = 'block';
-        })
+    SendButton.addEventListener('click', function(){
+        CloseModal()
     })
+
+    CloseButton.addEventListener('click', function(){
+        CloseModal()
+    })
+
 </script>
 </html>

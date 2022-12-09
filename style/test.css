@@ -22,3 +22,110 @@
 .test-title-block .title {
     padding-top: 50px;
 }
+
+/* modal */
+
+.review-modal {
+    z-index: 99999;
+    position: fixed;
+    right: 5%;
+    width: 90%;
+    height: 90%;
+    top: 5%;
+
+
+    display: none;
+}
+.overlay {
+    z-index: 9999;
+    width: 102%;
+    height: 102%;
+    top: 0%;
+    left: 0;
+    position: fixed;
+    background: rgba(0,0,0,0.6);
+
+    display: none;
+}
+
+.review-modal h3 {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 71px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.review-modal .content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.review-modal .wrapper {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.review-modal .content-wrapper select {
+    width: 170px;
+}
+.review-modal .content-wrapper div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.review-modal .content-wrapper div input,.review-modal .content-wrapper div select  {
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: unset;
+    margin-bottom: 10px;
+}
+.review-modal .content-wrapper div label, .review-modal .content-wrapper h3 {
+    font-size: 32px;
+}
+.review-modal .content-wrapper div select  {
+    background: #A7A7A7;
+}
+.review-modal textarea {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+.review-modal .checkboxes {
+    display: flex;
+    flex-direction: column;   
+     padding-left: 80px;
+    padding-top: 10px;
+}
+
+.review-modal footer {
+    display: flex;
+    justify-content: center;
+}
+.review-modal footer button {
+    height: 60px;
+    width: 250px;
+    border-radius: 10px;    
+    margin-top: 5px;
+}
+
+.review-modal .close {
+    background: transparent;
+    border: unset;
+    font-size: 50px;
+    top: 0;
+    right: 0;
+    position: absolute;
+    cursor: pointer;
+}
+
+.review-modal .radio-buttons {
+    border: unset;
+    padding-left: 63px;
+}
+.review-modal .radio-buttons label {
+    color: white;
+}
+
+.review-modal .checkbox {
+    padding-left: 63px;
+}

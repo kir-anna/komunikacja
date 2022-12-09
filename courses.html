@@ -162,11 +162,6 @@
                     <label for="TestDate" class="fz-merriweather  clr-white">Course Start Date</label>
                     <select name="TestDate" id="TestDate">
                         <option value="default"></option>
-                        <option value="1">01.05.2023, 12:00</option>
-                        <option value="2">01.09.2023, 15:00</option>
-                        <option value="3">10.12.2023, 13:00</option>
-                        <option value="4">15.02.2024, 15:00</option>
-                        <option value="5">11.04.2024, 15:00</option>
                     </select>
                 </div>
             </div>
@@ -204,6 +199,7 @@
     const CloseButton = document.getElementById('close')
     const SendButton = document.getElementById('send');
     const DynamicTitle = document.getElementById('dynamic-title')
+    const DynamicTestDate = document.getElementById('TestDate')
 
     function OpenModal (){
         Modal.style.display = 'block';
@@ -216,17 +212,43 @@
     }
     ApplyButtonsC1.addEventListener('click', function(){
         OpenModal()
+        removeOptions(DynamicTestDate);
         DynamicTitle.innerHTML = "PRE-ADVANCED course" 
-
+        let option = document.createElement("option");
+        option.text = "Summer Semestr 02.04.2023";
+        let option2 = document.createElement("option");
+        option2.text = "Summer Semestr, group 210.04.2023";
+        let option3 = document.createElement("option");
+        option3.text = "Summer Semestr, group 320.04.2023";
+        DynamicTestDate.add(option);
+        DynamicTestDate.add(option2)
+        DynamicTestDate.add(option3)
     })
     ApplyButtonsB1.addEventListener('click', function(){
         OpenModal()
+        removeOptions(DynamicTestDate);
         DynamicTitle.innerHTML = "intermediate course" 
+        let option = document.createElement("option");
+        option.text = "Summer Semestr 01.03.2023";
+        let option2 = document.createElement("option");
+        option2.text = "Winter Semestr 01.11.2023";
+        DynamicTestDate.add(option);
+        DynamicTestDate.add(option2)
 
     })
     ApplyButtonsB2.addEventListener('click', function(){
         OpenModal()
+        removeOptions(DynamicTestDate);
         DynamicTitle.innerHTML = "upper intermediate course" 
+        let option = document.createElement("option");
+        option.text = "Summer Semestr 02.04.2023";
+        let option2 = document.createElement("option");
+        option2.text = "Winter Semestr 02.12.2023";
+        let option3 = document.createElement("option");
+        option3.text = "Winter Semestr, 2 group 01.11.2023";
+        DynamicTestDate.add(option);
+        DynamicTestDate.add(option2)
+        DynamicTestDate.add(option3)
     })
 
     SendButton.addEventListener('click', function(){
@@ -236,6 +258,13 @@
     CloseButton.addEventListener('click', function(){
         CloseModal()
     })
+
+    function removeOptions(selectElement) {
+   var i, L = selectElement.options.length - 1;
+   for(i = L; i >= 0; i--) {
+      selectElement.remove(i);
+   }
+}
 
 </script>
 </html>

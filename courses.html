@@ -192,19 +192,15 @@
 
 <script>
     // onkeypress
-
-    document.getElementById('keypress-grey').addEventListener('keypress', function(){
-        document.getElementById('keypress-grey').style.backgroundColor = "grey";
-    })   
-    document.getElementById('keypress-yellow').addEventListener('keypress', function(){
-        document.getElementById('keypress-yellow').style.backgroundColor = "yellow";
-    })  
-    document.getElementById('keypress-green').addEventListener('keypress', function(){
-        document.getElementById('keypress-green').style.backgroundColor = "green";
-    })  
-    document.getElementById('keypress-brown').addEventListener('keypress', function(){
-        document.getElementById('keypress-brown').style.backgroundColor = "brown";
-    })  
+    function addListenerForKeypress(color) {
+        document.getElementById(`keypress-${color}`).addEventListener('keypress', function(){
+            document.getElementById(`keypress-${color}`).style.backgroundColor = color;
+        })  
+    }
+    addListenerForKeypress('grey')
+    addListenerForKeypress('yellow')
+    addListenerForKeypress('green')
+    addListenerForKeypress('brown')
     
     const ApplyButtonsC1 = document.getElementById('apply-test-c1');
     const ApplyButtonsB1 = document.getElementById('apply-test-b1');

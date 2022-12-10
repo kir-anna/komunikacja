@@ -17,7 +17,7 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Courses page</title>
 </head>
-<body>
+<body id="body">
     <header class="header">
         <li><a class="fz-oswald clr-black" href="index.html">WELCOME</a></li>
         <li class="bg-default"> <a class="fz-oswald clr-white" href="courses.html">COURSES</a></li>
@@ -133,7 +133,7 @@
                     </span></button>
                 <div>
                     <label for="LastName" class="fz-merriweather  clr-white">Last Name</label>
-                    <input type="text" name="LastName" id="LastName">
+                    <input id="keypress-demo" type="text" name="LastName" id="LastName">
                 </div>
                 <div>
                     <label for="FirstName" class="fz-merriweather  clr-white">First Name</label>
@@ -191,6 +191,13 @@
 </body>
 
 <script>
+
+    document.getElementById("keypress-demo").addEventListener("keypress", hanldeKeyPress);
+
+    function hanldeKeyPress () {
+        document.getElementById("keypress-demo").style.backgroundColor = "red";
+    }
+    
     const ApplyButtonsC1 = document.getElementById('apply-test-c1');
     const ApplyButtonsB1 = document.getElementById('apply-test-b1');
     const ApplyButtonsB2 = document.getElementById('apply-test-b2');

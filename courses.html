@@ -133,19 +133,19 @@
                     </span></button>
                 <div>
                     <label for="LastName" class="fz-merriweather  clr-white">Last Name</label>
-                    <input id="keypress-demo" type="text" name="LastName" id="LastName">
+                    <input id="keypress-grey" type="text" name="LastName" id="LastName">
                 </div>
                 <div>
                     <label for="FirstName" class="fz-merriweather  clr-white">First Name</label>
-                    <input type="text" name="FirstName" id="FirstName">
+                    <input id="keypress-yellow" type="text" name="FirstName" id="FirstName">
                 </div>
                 <div>
                     <label for="PhoneNumber" class="fz-merriweather  clr-white">PhoneNumber</label>
-                    <input type="text" name="PhoneNumber" id="PhoneNumber">
+                    <input id="keypress-green" type="text" name="PhoneNumber" id="PhoneNumber">
                 </div>
                 <div>
                     <label for="email" class="fz-merriweather  clr-white">E-mail</label>
-                    <input type="text" name="email" id="email">
+                    <input id="keypress-brown" type="text" name="email" id="email">
                 </div>
                 <div>
                     <label for="NativeLanguage" class="fz-merriweather  clr-white">Native Language</label>
@@ -192,11 +192,18 @@
 
 <script>
 
-    document.getElementById("keypress-demo").addEventListener("keypress", hanldeKeyPress);
-
-    function hanldeKeyPress () {
-        document.getElementById("keypress-demo").style.backgroundColor = "red";
-    }
+    document.getElementById('keypress-grey').addEventListener('keypress', function(){
+        document.getElementById('keypress-grey').style.backgroundColor = "grey";
+    })   
+    document.getElementById('keypress-yellow').addEventListener('keypress', function(){
+        document.getElementById('keypress-yellow').style.backgroundColor = "yellow";
+    })  
+    document.getElementById('keypress-green').addEventListener('keypress', function(){
+        document.getElementById('keypress-green').style.backgroundColor = "green";
+    })  
+    document.getElementById('keypress-brown').addEventListener('keypress', function(){
+        document.getElementById('keypress-brown').style.backgroundColor = "brown";
+    })  
     
     const ApplyButtonsC1 = document.getElementById('apply-test-c1');
     const ApplyButtonsB1 = document.getElementById('apply-test-b1');

@@ -52,6 +52,9 @@ body {
 .image-3 {background-color: #487D76;}
 .image-4 {background-color: #487D76;}
 
+.auto-control {
+  display: none;
+}
 
 /* Блок с контролами */
 .slider-controls {
